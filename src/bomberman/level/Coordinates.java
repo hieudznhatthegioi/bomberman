@@ -1,7 +1,7 @@
 package bomberman.level;
 
 import bomberman.Game;
-
+// ,
 public class Coordinates {
 
     public static int pixelToTile(double i) {

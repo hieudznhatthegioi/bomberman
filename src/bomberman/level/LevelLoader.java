@@ -1,5 +1,5 @@
 package bomberman.level;
-
+// vaivai
 import bomberman.Board;
 import bomberman.exceptions.LoadLevelException;
 

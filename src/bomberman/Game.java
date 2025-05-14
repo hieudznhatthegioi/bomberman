@@ -48,7 +48,7 @@ public class Game extends Canvas {
 
     private BufferedImage image = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_INT_RGB);
     private int[] pixels = ((DataBufferInt) image.getRaster().getDataBuffer()).getData();
-
+//dddddd
     public Game(Frame frame) {
         _frame = frame;
         _frame.setTitle(TITLE);

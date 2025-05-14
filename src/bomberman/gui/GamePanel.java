@@ -26,7 +26,7 @@ public class GamePanel extends JPanel {
         setFocusable(true);
 
     }
-
+//sss
     public Game getGame() {
         return _game;
     }

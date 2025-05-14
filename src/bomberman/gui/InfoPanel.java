@@ -38,5 +38,5 @@ public class InfoPanel extends JPanel {
     public void setPoints(int t) {
         pointsLabel.setText("Score: " + t);
     }
-
+//ss
 }
