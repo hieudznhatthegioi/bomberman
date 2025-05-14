@@ -23,7 +23,7 @@ public abstract class Entity implements IRender {
 
     /**
      * Phương thức này được gọi liên tục trong vòng lặp game,
-     * mục đích để cập nhật hình ảnh của entity theo trạng thái
+     * mục đích để cập nhật hình ảnh của entity theo trạng thái.
      */
     @Override
     public abstract void render(Screen screen);
@@ -41,7 +41,7 @@ public abstract class Entity implements IRender {
     }
 
     /**
-     * Phương thức này được gọi để xử lý khi hai entity va chạm vào nhau
+     * Phương thức này được gọi để xử lý khi hai entity va chạm vào nhau.
      * 
      * @param e
      * @return
