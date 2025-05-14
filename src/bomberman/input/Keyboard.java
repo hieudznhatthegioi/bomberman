@@ -4,7 +4,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 /**
- * Tiếp nhận và xử lý các sự kiện nhập từ bàn phím
+ * Tiếp nhận và xử lý các sự kiện nhập từ bàn phím..
  */
 public class Keyboard implements KeyListener {
 
