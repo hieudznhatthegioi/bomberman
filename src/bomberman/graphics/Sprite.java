@@ -12,14 +12,15 @@ public class Sprite {
     protected int _realHeight;
     private SpriteSheet _sheet;
     private SpriteSheet1 _sheet1;
+    private SpriteSheet2 _sheet2;
     /*
      * |--------------------------------------------------------------------------
      * | Board sprites
      * |--------------------------------------------------------------------------
      */
-    public static Sprite grass = new Sprite(16, 8, 4, SpriteSheet1.tiles, 16, 16);
+    public static Sprite grass = new Sprite(16, 6, 0, SpriteSheet.tiles, 16, 16);
     public static Sprite brick = new Sprite(16, 7, 0, SpriteSheet.tiles, 16, 16);
-    public static Sprite wall = new Sprite(16, 3, 13, SpriteSheet1.tiles, 16, 16);
+    public static Sprite wall = new Sprite(16, 5, 0, SpriteSheet.tiles, 16, 16);
     public static Sprite portal = new Sprite(16, 8, 7, SpriteSheet1.tiles, 14, 14);
 
     /*
@@ -199,6 +200,17 @@ public class Sprite {
         load1();
     }
 
+    public Sprite(int size, int x, int y, SpriteSheet2 sheet2, int rw, int rh) {
+        SIZE = size;
+        _pixels = new int[SIZE * SIZE];
+        _x = x * SIZE;
+        _y = y * SIZE;
+        _sheet2 = sheet2;
+        _realWidth = rw;
+        _realHeight = rh;
+        load2();
+    }
+
     public Sprite(int size, int color) {
         SIZE = size;
         _pixels = new int[SIZE * SIZE];
@@ -223,6 +235,14 @@ public class Sprite {
         for (int y = 0; y < SIZE; y++) {
             for (int x = 0; x < SIZE; x++) {
                 _pixels[x + y * SIZE] = _sheet1._pixels[(x + _x) + (y + _y) * _sheet1.SIZE];
+            }
+        }
+    }
+
+    private void load2() {
+        for (int y = 0; y < SIZE; y++) {
+            for (int x = 0; x < SIZE; x++) {
+                _pixels[x + y * SIZE] = _sheet2._pixels[(x + _x) + (y + _y) * _sheet2.SIZE];
             }
         }
     }

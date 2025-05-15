@@ -38,6 +38,7 @@ public class Frame extends JFrame {
         _game.start();
     }
 
+    // cap nhap time va point
     public void setTime(int time) {
         _infopanel.setTime(time);
     }

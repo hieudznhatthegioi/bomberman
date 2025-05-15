@@ -14,7 +14,7 @@ public class DestroyableTile extends Tile {
     private int _animate = 0;
     protected boolean _destroyed = false;
     protected int _timeToDisapear = 20;
-    protected Sprite _belowSprite = Sprite.grass;
+    protected Sprite _belowSprite = Sprite.grass;   
 
     public DestroyableTile(int x, int y, Sprite sprite) {
         super(x, y, sprite);
@@ -40,7 +40,7 @@ public class DestroyableTile extends Tile {
 
     @Override
     public boolean collide(Entity e) {
-        // TODO: xử lý khi va chạm với Flame
+        
         if (e instanceof Flame)
             destroy();
         return false;
